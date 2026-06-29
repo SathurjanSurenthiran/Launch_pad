@@ -1,0 +1,7 @@
+export const PROJECT_STATUS = Object.freeze({
+  DRAFT: "DRAFT",
+  PENDING: "PENDING",
+  APPROVED: "APPROVED",
+  REJECTED: "REJECTED",
+  HIDDEN: "HIDDEN",
+});
