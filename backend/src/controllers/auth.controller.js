@@ -18,7 +18,7 @@ const parseExpiryToMs = (str) => {
 const getCookieOptions = () => ({
   httpOnly: true,
   secure: env.NODE_ENV === "production",
-  sameSite: "strict",
+  sameSite: env.NODE_ENV === "production" ? "none" : "strict",
   maxAge: parseExpiryToMs(env.JWT_EXPIRES_IN),
 });
 
@@ -70,7 +70,7 @@ export const logout = async (req, res, next) => {
     const clearOptions = {
       httpOnly: true,
       secure: env.NODE_ENV === "production",
-      sameSite: "strict",
+      sameSite: env.NODE_ENV === "production" ? "none" : "strict",
     };
     res.clearCookie("token", clearOptions);
     return ApiResponse.success(res, null, "Logged out successfully");

@@ -27,4 +27,10 @@ export const PROJECT_CATEGORIES = [
   'OTHER',
 ];
 
-export const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api';
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
+if (import.meta.env.PROD && !apiBaseUrl) {
+  throw new Error('VITE_API_BASE_URL must be set for production builds.');
+}
+
+export const BASE_URL = apiBaseUrl || 'http://localhost:3000/api';
