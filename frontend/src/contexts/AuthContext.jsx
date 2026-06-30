@@ -57,7 +57,7 @@ export function AuthProvider({ children }) {
       authService.clearSession();
       setUser(null);
       setIsAuthenticated(false);
-      window.location.href = '/login';
+      window.location.href = '/';
     }
   };
 

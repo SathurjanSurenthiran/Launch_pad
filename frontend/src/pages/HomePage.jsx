@@ -7,7 +7,7 @@ import useApi from '../hooks/useApi';
 import ProjectCard from '../components/ProjectCard';
 import SkeletonCard from '../components/ui/SkeletonCard';
 import Button from '../components/ui/Button';
-import { ChevronLeft, ChevronRight, Heart, Eye } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Heart, Eye, ArrowRight } from 'lucide-react';
 
 const MOCK_FEATURED_PROJECTS = [
   {
@@ -182,14 +182,15 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center">
               <button
                 onClick={() => navigate('/projects')}
-                className="w-full sm:w-auto px-8 py-3.5 bg-violet-600 hover:bg-violet-750 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] text-sm shadow-md shadow-violet-500/20"
+                className="group w-full sm:w-auto px-8 py-3.5 flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-750 hover:to-indigo-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.97] text-sm shadow-lg shadow-violet-550/20 hover:shadow-xl hover:shadow-violet-500/30"
               >
-                Browse Projects
+                <span>Browse Projects</span>
+                <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform duration-300 ease-out" />
               </button>
               {!isAuthenticated && (
                 <button
                   onClick={() => navigate('/login')}
-                  className="w-full sm:w-auto px-8 py-3.5 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 font-bold rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-750 transition-all duration-300 text-sm hover:border-violet-450"
+                  className="w-full sm:w-auto px-8 py-3.5 border border-gray-250 dark:border-gray-700 hover:border-violet-300 dark:hover:border-violet-850 bg-white/50 dark:bg-gray-800/40 text-gray-750 dark:text-gray-200 font-bold rounded-2xl hover:bg-gray-50/80 dark:hover:bg-gray-800/80 transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.97] text-sm"
                 >
                   Sign In
                 </button>

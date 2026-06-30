@@ -6,6 +6,7 @@ import { statsService } from '../../services/stats.service';
 import { GoogleLogin } from '@react-oauth/google';
 import Spinner from '../../components/ui/Spinner';
 import toast from 'react-hot-toast';
+import logo from '../../assets/logo.png';
 
 export default function LoginPage() {
   const { isAuthenticated, isLoading, user, login } = useAuth();
@@ -80,7 +81,13 @@ export default function LoginPage() {
         <div className="hidden md:flex flex-col justify-between bg-slate-900 dark:bg-slate-950 p-12 gap-10">
           <div className="flex flex-col gap-7">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center text-xs font-black text-white tracking-wider">LP</div>
+              <div className="w-9 h-9 overflow-hidden rounded-lg flex items-center justify-center shrink-0">
+                <img
+                  src={logo}
+                  alt="LaunchPad"
+                  className="w-full h-full object-contain scale-[1.8]"
+                />
+              </div>
               <span className="text-lg font-bold text-white tracking-tight">LaunchPad</span>
             </div>
 

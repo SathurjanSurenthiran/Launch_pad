@@ -5,6 +5,7 @@ import { useTheme } from '../../contexts/ThemeContext';
 import { notificationService } from '../../services/notification.service';
 import Avatar from '../ui/Avatar';
 import logo from '../../assets/logo.png';
+import { Sun, Moon, Bell, Menu, X, LogOut, User } from 'lucide-react';
 
 export default function Navbar() {
   const { user, isAuthenticated, logout } = useAuth();
@@ -57,40 +58,40 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     await logout();
-    navigate('/login');
+    navigate('/');
   };
 
   return (
-    <nav className="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 sticky top-0 z-40 transition-colors duration-200">
+    <nav className="bg-white/70 dark:bg-gray-900/70 backdrop-blur-md border-b border-gray-200/40 dark:border-gray-800/40 sticky top-0 z-40 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           
           {/* Left section: Logo and Nav Links */}
-          <div className="flex items-center gap-6">
-            <Link to="/" className="flex-shrink-0 flex items-center gap-2">
-              <div className="w-12 h-12 overflow-hidden rounded-xl flex items-center justify-center flex-shrink-0">
+          <div className="flex items-center gap-8">
+            <Link to="/" className="flex-shrink-0 flex items-center gap-2.5 group">
+              <div className="w-9 h-9 overflow-hidden rounded-xl bg-gray-50 dark:bg-gray-800 flex items-center justify-center shrink-0 border border-gray-100 dark:border-gray-700 group-hover:scale-105 transition-transform duration-300">
                 <img
                   src={logo}
                   alt="LaunchPad"
                   className="w-full h-full object-contain scale-[1.8]"
                 />
               </div>
-              <span className="text-base font-bold text-gray-900 dark:text-white">
+              <span className="text-base font-bold text-gray-950 dark:text-white tracking-tight group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                 LaunchPad
               </span>
             </Link>
 
-            {/* Desktop Center Navigation Links */}
-            <div className="hidden md:flex items-center space-x-2">
+            {/* Desktop Navigation Links */}
+            <div className="hidden md:flex items-center space-x-1.5">
                {/* Not Logged In or Logged In as STUDENT */}
               {(!isAuthenticated || user?.role === 'STUDENT') && (
                 <NavLink
                   to="/projects"
                   className={({ isActive }) =>
-                    `px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+                    `px-3.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
                       isActive
-                        ? 'bg-gray-100 dark:bg-gray-700 text-violet-600 dark:text-violet-400'
-                        : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
+                        ? 'bg-violet-50/60 dark:bg-violet-950/20 text-violet-600 dark:text-violet-400'
+                        : 'text-gray-600 dark:text-gray-300 hover:text-gray-950 dark:hover:text-white hover:bg-gray-50/50 dark:hover:bg-gray-800/40'
                     }`
                   }
                 >
@@ -102,10 +103,10 @@ export default function Navbar() {
                 <NavLink
                   to="/projects/new"
                   className={({ isActive }) =>
-                    `px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+                    `px-3.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
                       isActive
-                        ? 'bg-gray-100 dark:bg-gray-700 text-violet-600 dark:text-violet-400'
-                        : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
+                        ? 'bg-violet-50/60 dark:bg-violet-950/20 text-violet-600 dark:text-violet-400'
+                        : 'text-gray-600 dark:text-gray-300 hover:text-gray-950 dark:hover:text-white hover:bg-gray-50/50 dark:hover:bg-gray-800/40'
                     }`
                   }
                 >
@@ -118,10 +119,10 @@ export default function Navbar() {
                 <NavLink
                   to="/recruiter/dashboard"
                   className={({ isActive }) =>
-                    `px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+                    `px-3.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
                       isActive
-                        ? 'bg-gray-100 dark:bg-gray-700 text-violet-600 dark:text-violet-400'
-                        : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
+                        ? 'bg-violet-50/60 dark:bg-violet-950/20 text-violet-600 dark:text-violet-400'
+                        : 'text-gray-600 dark:text-gray-300 hover:text-gray-950 dark:hover:text-white hover:bg-gray-50/50 dark:hover:bg-gray-800/40'
                     }`
                   }
                 >
@@ -135,10 +136,10 @@ export default function Navbar() {
                   <NavLink
                     to="/admin/dashboard"
                     className={({ isActive }) =>
-                      `px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+                      `px-3.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
                         isActive
-                          ? 'bg-gray-100 dark:bg-gray-700 text-violet-600 dark:text-violet-400'
-                          : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
+                          ? 'bg-violet-50/60 dark:bg-violet-950/20 text-violet-600 dark:text-violet-400'
+                          : 'text-gray-600 dark:text-gray-300 hover:text-gray-950 dark:hover:text-white hover:bg-gray-50/50 dark:hover:bg-gray-800/40'
                       }`
                     }
                   >
@@ -147,10 +148,10 @@ export default function Navbar() {
                   <NavLink
                     to="/admin/users"
                     className={({ isActive }) =>
-                      `px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+                      `px-3.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
                         isActive
-                          ? 'bg-gray-100 dark:bg-gray-700 text-violet-600 dark:text-violet-400'
-                          : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
+                          ? 'bg-violet-50/60 dark:bg-violet-950/20 text-violet-600 dark:text-violet-400'
+                          : 'text-gray-600 dark:text-gray-300 hover:text-gray-950 dark:hover:text-white hover:bg-gray-50/50 dark:hover:bg-gray-800/40'
                       }`
                     }
                   >
@@ -159,10 +160,10 @@ export default function Navbar() {
                   <NavLink
                     to="/admin/projects"
                     className={({ isActive }) =>
-                      `px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+                      `px-3.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
                         isActive
-                          ? 'bg-gray-100 dark:bg-gray-700 text-violet-600 dark:text-violet-400'
-                          : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
+                          ? 'bg-violet-50/60 dark:bg-violet-950/20 text-violet-600 dark:text-violet-400'
+                          : 'text-gray-600 dark:text-gray-300 hover:text-gray-950 dark:hover:text-white hover:bg-gray-50/50 dark:hover:bg-gray-800/40'
                       }`
                     }
                   >
@@ -174,22 +175,19 @@ export default function Navbar() {
           </div>
 
           {/* Right section: Authentication and User menu */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
             {isAuthenticated ? (
               <>
                 {/* Notification Bell (Only for STUDENT and RECRUITER) */}
                 {user?.role !== 'ADMIN' && (
                   <Link
                     to="/notifications"
-                    className="relative p-2 text-gray-500 hover:text-violet-600 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                    className="relative p-2 text-gray-500 hover:text-violet-600 dark:text-gray-400 dark:hover:text-violet-400 rounded-xl hover:bg-gray-50/80 dark:hover:bg-gray-800/50 transition-all duration-200"
                   >
                     <span className="sr-only">Notifications</span>
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-                      <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-                    </svg>
+                    <Bell size={18} />
                     {unreadCount > 0 && (
-                      <span className="absolute top-1 right-1 bg-red-500 text-white rounded-full text-[10px] font-bold h-4 w-4 flex items-center justify-center border-2 border-white dark:border-gray-800">
+                      <span className="absolute top-1.5 right-1.5 bg-violet-600 text-white rounded-full text-[9px] font-black h-3.5 w-3.5 flex items-center justify-center shadow-sm">
                         {unreadCount}
                       </span>
                     )}
@@ -200,46 +198,33 @@ export default function Navbar() {
                 <button
                   onClick={toggleTheme}
                   aria-label="Toggle theme"
-                  className="p-2 rounded-lg text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  className="p-2 rounded-xl text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white hover:bg-gray-50/80 dark:hover:bg-gray-800/50 transition-all duration-200"
                 >
-                  {isDark ? (
-                    // Sun icon — shown in dark mode to switch to light
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                      <circle cx="12" cy="12" r="5" />
-                      <line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" />
-                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                      <line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" />
-                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                    </svg>
-                  ) : (
-                    // Moon icon — shown in light mode to switch to dark
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                    </svg>
-                  )}
+                  {isDark ? <Sun size={18} /> : <Moon size={18} />}
                 </button>
 
                 {/* Profile Dropdown Menu */}
                 <div className="relative" ref={dropdownRef}>
                   <button
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="flex text-sm rounded-full focus:outline-none focus:ring-1 focus:ring-violet-500"
+                    className="flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-violet-500/30 hover:scale-102 transition-transform"
                   >
                     <Avatar src={user?.profilePicture} name={user?.name || 'User'} size="sm" />
                   </button>
 
                   {isDropdownOpen && (
-                    <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-xl shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black/5 dark:ring-white/10 py-1.5 focus:outline-none divide-y divide-gray-100 dark:divide-gray-700 animate-in fade-in slide-in-from-top-2 duration-150">
-                      <div className="px-4 py-2 text-xs text-gray-500 dark:text-gray-400">
-                        Signed in as <p className="font-bold text-gray-900 dark:text-white truncate">{user?.name}</p>
+                    <div className="origin-top-right absolute right-0 mt-3 w-56 rounded-2xl shadow-xl bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border border-gray-150 dark:border-gray-800/80 p-2 focus:outline-none divide-y divide-gray-100 dark:divide-gray-800/50 animate-in fade-in slide-in-from-top-3 duration-200 z-50">
+                      <div className="px-4 py-2.5 text-xs text-gray-400 dark:text-gray-500">
+                        Signed in as <p className="font-bold text-gray-900 dark:text-white truncate mt-0.5">{user?.name}</p>
                       </div>
                       
                       <div className="py-1">
                         {user?.role !== 'ADMIN' && (
                           <Link
                             to="/profile"
-                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
+                            className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-xl transition-all font-semibold"
                           >
+                            <User size={14} className="text-gray-450 dark:text-gray-450" />
                             My Profile
                           </Link>
                         )}
@@ -248,8 +233,9 @@ export default function Navbar() {
                       <div className="py-1">
                         <button
                           onClick={handleLogout}
-                          className="w-full text-left block px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20 font-bold"
+                          className="w-full text-left flex items-center gap-2.5 px-4 py-2.5 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20 font-bold rounded-xl transition-all"
                         >
+                          <LogOut size={14} />
                           Sign Out
                         </button>
                       </div>
@@ -263,25 +249,13 @@ export default function Navbar() {
                 <button
                   onClick={toggleTheme}
                   aria-label="Toggle theme"
-                  className="p-2 rounded-lg text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  className="p-2 rounded-xl text-gray-500 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white hover:bg-gray-50/80 dark:hover:bg-gray-800/50 transition-all duration-200"
                 >
-                  {isDark ? (
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                      <circle cx="12" cy="12" r="5" />
-                      <line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" />
-                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                      <line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" />
-                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                    </svg>
-                  ) : (
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                    </svg>
-                  )}
+                  {isDark ? <Sun size={18} /> : <Moon size={18} />}
                 </button>
                 <Link
                   to="/login"
-                  className="inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-lg text-sm font-bold text-white bg-violet-600 hover:bg-violet-750 shadow-sm transition-all focus:outline-none"
+                  className="inline-flex items-center justify-center px-4.5 py-2.5 rounded-xl text-sm font-bold text-white bg-violet-600 hover:bg-violet-750 shadow-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   Sign In
                 </Link>
@@ -293,18 +267,10 @@ export default function Navbar() {
           <div className="-mr-2 flex items-center md:hidden">
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-lg text-gray-500 hover:text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-xl text-gray-555 hover:text-gray-950 dark:text-gray-450 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 focus:outline-none transition-all duration-200"
             >
               <span className="sr-only">Open main menu</span>
-              {isMobileOpen ? (
-                <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
+              {isMobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
@@ -312,12 +278,12 @@ export default function Navbar() {
 
       {/* Mobile Drawer menu */}
       {isMobileOpen && (
-        <div className="md:hidden border-t border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 animate-in slide-in-from-top duration-200">
-          <div className="pt-2 pb-3 space-y-1 px-4">
+        <div className="md:hidden border-t border-gray-150/40 dark:border-gray-800/40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md animate-in slide-in-from-top duration-250">
+          <div className="pt-2 pb-3 space-y-1.5 px-4">
              {(!isAuthenticated || user?.role === 'STUDENT') && (
               <Link
                 to="/projects"
-                className="block px-3 py-2 rounded-lg text-base font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
+                className="block px-4 py-2.5 rounded-xl text-base font-semibold text-gray-700 dark:text-gray-250 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all"
               >
                 Projects
               </Link>
@@ -325,7 +291,7 @@ export default function Navbar() {
             {isAuthenticated && user?.role === 'STUDENT' && (
               <Link
                 to="/projects/new"
-                className="block px-3 py-2 rounded-lg text-base font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
+                className="block px-4 py-2.5 rounded-xl text-base font-semibold text-gray-700 dark:text-gray-250 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all"
               >
                 Submit Project
               </Link>
@@ -333,7 +299,7 @@ export default function Navbar() {
             {isAuthenticated && user?.role === 'RECRUITER' && (
               <Link
                 to="/recruiter/dashboard"
-                className="block px-3 py-2 rounded-lg text-base font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
+                className="block px-4 py-2.5 rounded-xl text-base font-semibold text-gray-700 dark:text-gray-250 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all"
               >
                 Dashboard
               </Link>
@@ -342,19 +308,19 @@ export default function Navbar() {
               <>
                 <Link
                   to="/admin/dashboard"
-                  className="block px-3 py-2 rounded-lg text-base font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
+                  className="block px-4 py-2.5 rounded-xl text-base font-semibold text-gray-700 dark:text-gray-250 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all"
                 >
                   Dashboard
                 </Link>
                 <Link
                   to="/admin/users"
-                  className="block px-3 py-2 rounded-lg text-base font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
+                  className="block px-4 py-2.5 rounded-xl text-base font-semibold text-gray-700 dark:text-gray-250 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all"
                 >
                   Users
                 </Link>
                 <Link
                   to="/admin/projects"
-                  className="block px-3 py-2 rounded-lg text-base font-semibold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
+                  className="block px-4 py-2.5 rounded-xl text-base font-semibold text-gray-700 dark:text-gray-250 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all"
                 >
                   Projects
                 </Link>
@@ -362,14 +328,14 @@ export default function Navbar() {
             )}
           </div>
 
-          <div className="pt-4 pb-4 border-t border-gray-200 dark:border-gray-700 px-4">
+          <div className="pt-4 pb-4 border-t border-gray-150/40 dark:border-gray-800/40 px-4">
             {isAuthenticated ? (
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <div className="flex items-center space-x-3 px-3 py-1">
                   <Avatar src={user?.profilePicture} name={user?.name || 'User'} size="sm" />
                   <div className="min-w-0 flex-1">
-                    <p className="text-sm font-bold text-gray-905 dark:text-white truncate">{user?.name}</p>
-                    <p className="text-xs text-gray-500 truncate">{user?.email}</p>
+                    <p className="text-sm font-bold text-gray-900 dark:text-white truncate">{user?.name}</p>
+                    <p className="text-xs text-gray-500 truncate mt-0.5">{user?.email}</p>
                   </div>
                 </div>
 
@@ -377,19 +343,23 @@ export default function Navbar() {
                   {user?.role !== 'ADMIN' && (
                     <Link
                       to="/profile"
-                      className="block px-3 py-2 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
+                      className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-base font-semibold text-gray-600 dark:text-gray-250 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all"
                     >
+                      <User size={15} />
                       My Profile
                     </Link>
                   )}
                   {user?.role !== 'ADMIN' && (
                     <Link
                       to="/notifications"
-                      className="block px-3 py-2 rounded-lg text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 flex items-center justify-between"
+                      className="flex items-center justify-between px-4 py-2.5 rounded-xl text-base font-semibold text-gray-600 dark:text-gray-250 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all"
                     >
-                      <span>Notifications</span>
+                      <div className="flex items-center gap-2.5">
+                        <Bell size={15} />
+                        <span>Notifications</span>
+                      </div>
                       {unreadCount > 0 && (
-                        <span className="inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold text-white bg-red-500 rounded-full">
+                        <span className="inline-flex items-center justify-center px-2 py-0.5 text-xs font-black text-white bg-violet-650 rounded-full">
                           {unreadCount}
                         </span>
                       )}
@@ -397,8 +367,9 @@ export default function Navbar() {
                   )}
                   <button
                     onClick={handleLogout}
-                    className="w-full text-left block px-3 py-2 rounded-lg text-base font-semibold text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20"
+                    className="w-full text-left flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-base font-bold text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20 transition-all"
                   >
+                    <LogOut size={15} />
                     Sign Out
                   </button>
                 </div>
@@ -406,7 +377,7 @@ export default function Navbar() {
             ) : (
               <Link
                 to="/login"
-                className="block w-full text-center px-4 py-2 border border-transparent rounded-lg text-base font-bold text-white bg-violet-600 hover:bg-violet-750 shadow-sm"
+                className="block w-full text-center px-4 py-3 rounded-xl text-base font-bold text-white bg-violet-600 hover:bg-violet-750 shadow-sm transition-all"
               >
                 Sign In
               </Link>
