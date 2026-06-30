@@ -6,7 +6,6 @@ import cookieParser from "cookie-parser";
 import morgan from "morgan";
 import mongoose from "mongoose";
 
-import env from "./config/env.js";
 import errorMiddleware from "./middlewares/error.middleware.js";
 import { globalLimiter } from "./middlewares/rate-limit.middleware.js";
 import NotFoundException from "./exceptions/not-found.exception.js";
@@ -29,17 +28,10 @@ app.use(
   })
 );
 
-// CORS configuration — allow any localhost port in development
-const allowedOrigins = env.NODE_ENV === "development"
-  ? (origin, callback) => {
-      // Allow all localhost origins (any port) in development
-      if (!origin || origin.startsWith("http://localhost:") || origin.startsWith("http://127.0.0.1:")) {
-        callback(null, true);
-      } else {
-        callback(new Error("CORS: Origin not allowed"));
-      }
-    }
-  : env.CLIENT_URL;
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://launch-pad-titans.vercel.app",
+];
 
 app.use(
   cors({
