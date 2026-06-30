@@ -1,0 +1,149 @@
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { Toaster } from 'react-hot-toast';
+
+import { AuthProvider } from './contexts/AuthContext';
+import { ThemeProvider } from './contexts/ThemeContext';
+import ProtectedRoute from './routes/ProtectedRoute';
+import { USER_ROLES } from './utils/constants';
+
+// Import Layouts
+import MainLayout from './layouts/MainLayout';
+import AdminLayout from './layouts/AdminLayout';
+
+// Import Pages
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/auth/LoginPage';
+import ProjectsPage from './pages/ProjectsPage';
+import CreateProjectPage from './pages/student/CreateProjectPage';
+import ProjectDetailPage from './pages/ProjectDetailPage';
+import EditProjectPage from './pages/student/EditProjectPage';
+import PublicProfilePage from './pages/PublicProfilePage';
+import MyProfilePage from './pages/MyProfilePage';
+import NotificationsPage from './pages/NotificationsPage';
+import RecruiterDashboardPage from './pages/recruiter/RecruiterDashboardPage';
+import AdminDashboardPage from './pages/admin/AdminDashboardPage';
+import AdminUsersPage from './pages/admin/AdminUsersPage';
+import AdminProjectsPage from './pages/admin/AdminProjectsPage';
+import NotFoundPage from './pages/NotFoundPage';
+
+const router = createBrowserRouter([
+  // Public and Client Authenticated routes using MainLayout
+  {
+    element: <MainLayout />,
+    children: [
+      {
+        path: '/',
+        element: <HomePage />,
+      },
+      {
+        path: '/login',
+        element: <LoginPage />,
+      },
+      {
+        path: '/projects',
+        element: <ProjectsPage />,
+      },
+      {
+        path: '/projects/:id',
+        element: <ProjectDetailPage />,
+      },
+      {
+        path: '/users/:id',
+        element: <PublicProfilePage />,
+      },
+
+      // Authenticated routes (any role)
+      {
+        element: <ProtectedRoute />,
+        children: [
+          {
+            path: '/profile',
+            element: <MyProfilePage />,
+          },
+          {
+            path: '/notifications',
+            element: <NotificationsPage />,
+          },
+        ],
+      },
+
+      // Student-only routes
+      {
+        element: <ProtectedRoute allowedRoles={[USER_ROLES.STUDENT]} />,
+        children: [
+          {
+            path: '/projects/new',
+            element: <CreateProjectPage />,
+          },
+          {
+            path: '/projects/:id/edit',
+            element: <EditProjectPage />,
+          },
+        ],
+      },
+
+      // Recruiter-only routes
+      {
+        element: <ProtectedRoute allowedRoles={[USER_ROLES.RECRUITER]} />,
+        children: [
+          {
+            path: '/recruiter/dashboard',
+            element: <RecruiterDashboardPage />,
+          },
+        ],
+      },
+    ],
+  },
+
+  // Admin routes using AdminLayout
+  {
+    element: <ProtectedRoute allowedRoles={[USER_ROLES.ADMIN]} />,
+    children: [
+      {
+        element: <AdminLayout />,
+        children: [
+          {
+            path: '/admin/dashboard',
+            element: <AdminDashboardPage />,
+          },
+          {
+            path: '/admin/users',
+            element: <AdminUsersPage />,
+          },
+          {
+            path: '/admin/projects',
+            element: <AdminProjectsPage />,
+          },
+        ],
+      },
+    ],
+  },
+
+  // Catch-all 404 route inside MainLayout
+  {
+    element: <MainLayout />,
+    children: [
+      {
+        path: '*',
+        element: <NotFoundPage />,
+      },
+    ],
+  },
+]);
+
+export default function App() {
+  const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || '';
+
+  return (
+    <GoogleOAuthProvider clientId={clientId} locale="en">
+      <ThemeProvider>
+        <AuthProvider>
+          <RouterProvider router={router} />
+          <Toaster position="top-right" />
+        </AuthProvider>
+      </ThemeProvider>
+    </GoogleOAuthProvider>
+  );
+}
