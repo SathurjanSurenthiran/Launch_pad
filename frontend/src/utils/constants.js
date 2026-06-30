@@ -33,4 +33,4 @@ if (import.meta.env.PROD && !apiBaseUrl) {
   console.warn('VITE_API_BASE_URL is not set for production builds. Falling back to relative path "/api".');
 }
 
-export const BASE_URL = apiBaseUrl || '/api';
+export const BASE_URL = apiBaseUrl || (import.meta.env.PROD ? '/api' : 'http://localhost:3000/api');
