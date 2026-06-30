@@ -1,0 +1,328 @@
+2026-06-27 15:21:17 [info]: MongoDB connection established successfully
+2026-06-27 15:21:17 [info]: 🚀 Server running on http://localhost:5000 in development mode
+2026-06-27 16:40:55 [info]: MongoDB connection established successfully
+2026-06-27 16:40:55 [info]: 🚀 Server running on http://localhost:5000 in development mode
+2026-06-27 16:45:57 [info]: MongoDB connection established successfully
+2026-06-27 16:45:57 [info]: 🚀 Server running on http://localhost:5000 in development mode
+2026-06-27 16:49:27 [info]: MongoDB connection established successfully
+2026-06-27 16:49:27 [info]: 🚀 Server running on http://localhost:5000 in development mode
+2026-06-27 16:53:01 [info]: MongoDB connection established successfully
+2026-06-27 16:53:01 [info]: 🚀 Server running on http://localhost:5000 in development mode
+2026-06-27 16:56:50 [info]: MongoDB connection established successfully
+2026-06-27 16:56:50 [info]: 🚀 Server running on http://localhost:5000 in development mode
+2026-06-27 17:02:45 [info]: MongoDB connection established successfully
+2026-06-27 17:02:45 [info]: 🚀 Server running on http://localhost:5000 in development mode
+2026-06-27 17:06:04 [info]: MongoDB connection established successfully
+2026-06-27 17:06:04 [info]: 🚀 Server running on http://localhost:5000 in development mode
+2026-06-27 17:58:47 [info]: MongoDB connection established successfully
+2026-06-27 17:58:47 [info]: 🚀 Server running on http://localhost:5000 in development mode
+2026-06-28 11:34:25 [info]: MongoDB connection established successfully
+2026-06-28 11:34:25 [info]: 🚀 Server running on http://localhost:5000 in development mode
+2026-06-28 11:50:15 [info]: MongoDB connection established successfully
+2026-06-28 11:50:15 [info]: 🚀 Server running on http://localhost:5000 in development mode
+2026-06-28 11:54:09 [info]: MongoDB connection established successfully
+2026-06-28 11:54:09 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 11:55:44 [info]: MongoDB connection established successfully
+2026-06-28 11:55:44 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 11:55:51 [info]: MongoDB connection established successfully
+2026-06-28 11:55:51 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 12:30:26 [info]: MongoDB connection established successfully
+2026-06-28 12:30:26 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 12:48:16 [info]: MongoDB connection established successfully
+2026-06-28 12:48:16 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 12:49:32 [error]: Unhandled Rejection: Unknown API key placeholder_cloudinary_api_key
+2026-06-28 12:49:32 [error]: Error: Cloudinary upload failed: Unknown API key placeholder_cloudinary_api_key
+    at file:///C:/Users/kanak/Downloads/Web%20Titans/Web%20Titans/backend/src/utils/cloudinary.js:22:25
+    at C:\Users\kanak\Downloads\Web Titans\Web Titans\backend\node_modules\cloudinary\lib\utils\index.js:1354:14
+    at IncomingMessage.<anonymous> (C:\Users\kanak\Downloads\Web Titans\Web Titans\backend\node_modules\cloudinary\lib\uploader.js:510:9)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+2026-06-28 12:49:53 [info]: MongoDB connection established successfully
+2026-06-28 12:49:53 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 12:53:35 [info]: MongoDB connection established successfully
+2026-06-28 12:53:35 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 12:55:01 [info]: [ActivityLog] Logged PROJECT_CREATED for project 6a40cc4c44bbbbcd42903d02
+2026-06-28 12:55:01 [info]: [Notification] Created PROJECT_CREATED for owner 6a40cc1244bbbbcd42903cfb
+2026-06-28 13:03:05 [info]: [Notification] Created PROJECT_CREATED for owner 6a40cc1244bbbbcd42903cfb
+2026-06-28 13:03:05 [info]: [ActivityLog] Logged PROJECT_CREATED for project 6a40ce3144bbbbcd42903ddc
+2026-06-28 13:07:19 [info]: [Notification] Created PROJECT_REJECTED for owner 6a40cc1244bbbbcd42903cfb
+2026-06-28 13:07:19 [info]: [ActivityLog] Logged PROJECT_STATUS_CHANGED to REJECTED for project 6a40ce3144bbbbcd42903ddc
+2026-06-28 13:13:48 [info]: [Notification] Created PROJECT_APPROVED for owner 6a40cc1244bbbbcd42903cfb
+2026-06-28 13:13:48 [info]: [ActivityLog] Logged PROJECT_STATUS_CHANGED to APPROVED for project 6a40cc4c44bbbbcd42903d02
+2026-06-28 13:14:19 [info]: [Notification] Created PROJECT_UPDATED for owner 6a40cc1244bbbbcd42903cfb
+2026-06-28 13:14:19 [info]: [ActivityLog] Logged PROJECT_STATUS_CHANGED to PENDING for project 6a40ce3144bbbbcd42903ddc
+2026-06-28 14:45:12 [info]: MongoDB connection established successfully
+2026-06-28 14:45:12 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 14:49:03 [info]: MongoDB connection established successfully
+2026-06-28 14:49:03 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 14:49:08 [info]: MongoDB connection established successfully
+2026-06-28 14:49:08 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 14:49:13 [info]: MongoDB connection established successfully
+2026-06-28 14:49:13 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 14:54:41 [info]: MongoDB connection established successfully
+2026-06-28 14:54:41 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:20:39 [info]: MongoDB connection established successfully
+2026-06-28 15:20:39 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:20:46 [info]: MongoDB connection established successfully
+2026-06-28 15:20:46 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:20:51 [info]: MongoDB connection established successfully
+2026-06-28 15:20:51 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:20:56 [info]: MongoDB connection established successfully
+2026-06-28 15:20:56 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:21:02 [info]: MongoDB connection established successfully
+2026-06-28 15:21:02 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:21:08 [info]: MongoDB connection established successfully
+2026-06-28 15:21:08 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:21:22 [info]: MongoDB connection established successfully
+2026-06-28 15:21:22 [info]: [Seed] Seeded Admin account: admin@launchpad.dev
+2026-06-28 15:21:22 [info]: [Seed] Seeded Recruiter account: recruiter@techcorp.com
+2026-06-28 15:21:22 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:22:53 [info]: MongoDB connection established successfully
+2026-06-28 15:22:53 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:30:04 [info]: MongoDB connection established successfully
+2026-06-28 15:30:04 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:30:09 [info]: MongoDB connection established successfully
+2026-06-28 15:30:09 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:30:15 [info]: MongoDB connection established successfully
+2026-06-28 15:30:15 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:30:20 [info]: MongoDB connection established successfully
+2026-06-28 15:30:20 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:30:26 [info]: MongoDB connection established successfully
+2026-06-28 15:30:26 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:36:35 [info]: MongoDB connection established successfully
+2026-06-28 15:36:35 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:40:16 [info]: MongoDB connection established successfully
+2026-06-28 15:40:16 [info]: Connected to database, running seed...
+2026-06-28 15:40:16 [info]: Seed completed.
+2026-06-28 15:40:16 [warn]: MongoDB connection disconnected
+2026-06-28 15:53:33 [info]: MongoDB connection established successfully
+2026-06-28 15:53:33 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 15:53:46 [info]: MongoDB connection established successfully
+2026-06-28 15:53:46 [info]: Successfully updated role of student@test.com to: ADMIN ✅
+2026-06-28 15:55:55 [info]: MongoDB connection established successfully
+2026-06-28 15:55:55 [info]: Successfully updated role of student@test.com to: RECRUITER ✅
+2026-06-28 15:57:48 [info]: MongoDB connection established successfully
+2026-06-28 15:57:48 [info]: Successfully updated role of student@test.com to: STUDENT ✅
+2026-06-28 15:57:48 [warn]: MongoDB connection disconnected
+2026-06-28 16:05:23 [info]: [Notification] Created PROJECT_CREATED for owner 6a40cc1244bbbbcd42903cfb
+2026-06-28 16:05:23 [info]: [ActivityLog] Logged PROJECT_CREATED for project 6a40f8ebf8c7ee953407bf4b
+2026-06-28 16:20:06 [info]: MongoDB connection established successfully
+2026-06-28 16:20:06 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 16:40:57 [info]: MongoDB connection established successfully
+2026-06-28 16:40:57 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-28 16:55:30 [info]: [ActivityLog] Logged PROJECT_CREATED for project 6a4104aa1d91bc679b451024
+2026-06-28 16:55:30 [info]: [Notification] Created PROJECT_CREATED for owner 6a4101641d91bc679b450fdf
+2026-06-28 16:58:08 [info]: [Notification] Created PROJECT_APPROVED for owner 6a4101641d91bc679b450fdf
+2026-06-28 16:58:08 [info]: [ActivityLog] Logged PROJECT_STATUS_CHANGED to APPROVED for project 6a4104aa1d91bc679b451024
+2026-06-28 16:58:31 [info]: [Notification] Created PROJECT_APPROVED for owner 6a40cc1244bbbbcd42903cfb
+2026-06-28 16:58:31 [info]: [ActivityLog] Logged PROJECT_STATUS_CHANGED to APPROVED for project 6a40f8ebf8c7ee953407bf4b
+2026-06-28 17:01:30 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a4105be1d91bc679b451095 for project 6a4104aa1d91bc679b451024
+2026-06-28 17:01:30 [info]: [Notification] Created PROJECT_LIKED for owner 6a4101641d91bc679b450fdf
+2026-06-28 17:01:50 [info]: [Notification] Created USER_FOLLOWED for followed user 6a4101641d91bc679b450fdf
+2026-06-28 17:01:50 [info]: [ActivityLog] Logged USER_FOLLOWED: 6a4105be1d91bc679b451095 followed 6a4101641d91bc679b450fdf
+2026-06-28 17:02:13 [info]: [Notification] Created PROJECT_LIKED for owner 6a40cc1244bbbbcd42903cfb
+2026-06-28 17:02:13 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a4105be1d91bc679b451095 for project 6a40f8ebf8c7ee953407bf4b
+2026-06-28 17:02:33 [info]: [Notification] Created USER_FOLLOWED for followed user 6a40cc1244bbbbcd42903cfb
+2026-06-28 17:02:33 [info]: [ActivityLog] Logged USER_FOLLOWED: 6a4105be1d91bc679b451095 followed 6a40cc1244bbbbcd42903cfb
+2026-06-29 07:59:20 [info]: MongoDB connection established successfully
+2026-06-29 07:59:20 [info]: Connected to database, running seed...
+2026-06-29 07:59:20 [info]: [Seed] Seeded Admin account: admin@launchpad.dev
+2026-06-29 07:59:20 [info]: [Seed] Seeded Recruiter account: recruiter@techcorp.com
+2026-06-29 07:59:20 [info]: [Seed] Seeded Student account: student@test.com
+2026-06-29 07:59:20 [error]: ValidationError: Project validation failed: category: `Web Development` is not a valid enum value for path `category`.
+    at model.validate (C:\Users\Amshavarthana\Desktop\Web Titans\Web Titans\backend\node_modules\mongoose\lib\document.js:2864:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async model.$__save (C:\Users\Amshavarthana\Desktop\Web Titans\Web Titans\backend\node_modules\mongoose\lib\model.js:399:7)
+    at async maybeTracedSave (C:\Users\Amshavarthana\Desktop\Web Titans\Web Titans\backend\node_modules\mongoose\lib\model.js:675:7)
+    at async C:\Users\Amshavarthana\Desktop\Web Titans\Web Titans\backend\node_modules\mongoose\lib\model.js:2832:9
+    at async Promise.all (index 0)
+    at async model.create (C:\Users\Amshavarthana\Desktop\Web Titans\Web Titans\backend\node_modules\mongoose\lib\model.js:2817:11)
+    at async seedDatabase (file:///C:/Users/Amshavarthana/Desktop/Web%20Titans/Web%20Titans/backend/src/config/seed.js:120:7)
+    at async run (file:///C:/Users/Amshavarthana/Desktop/Web%20Titans/Web%20Titans/backend/src/run-seed.js:10:5)
+2026-06-29 07:59:20 [info]: Seed completed.
+2026-06-29 07:59:34 [info]: MongoDB connection established successfully
+2026-06-29 07:59:34 [info]: Connected to database, running seed...
+2026-06-29 07:59:34 [info]: [Seed] Seeded 3 approved sample projects successfully
+2026-06-29 07:59:34 [info]: Seed completed.
+2026-06-29 07:59:34 [warn]: MongoDB connection disconnected
+2026-06-29 07:59:41 [info]: MongoDB connection established successfully
+2026-06-29 07:59:41 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-29 08:22:03 [info]: [Notification] Created PROJECT_LIKED for owner 6a428848a71f6fed4c861908
+2026-06-29 08:22:03 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a428d87a85d845bdad34505 for project 6a42885640c9f9897ab2e142
+2026-06-29 08:27:00 [info]: MongoDB connection established successfully
+2026-06-29 08:27:00 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-29 09:54:46 [info]: MongoDB connection established successfully
+2026-06-29 09:54:46 [info]: Connected to database, running seed...
+2026-06-29 09:54:46 [info]: Seed completed.
+2026-06-29 09:54:46 [warn]: MongoDB connection disconnected
+2026-06-29 09:55:27 [info]: MongoDB connection established successfully
+2026-06-29 09:55:27 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-29 09:57:03 [info]: [Notification] Created PROJECT_LIKED for owner 6a428848a71f6fed4c861908
+2026-06-29 09:57:03 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a428d87a85d845bdad34505 for project 6a42885640c9f9897ab2e144
+2026-06-29 10:01:41 [info]: [Notification] Created PROJECT_LIKED for owner 6a428848a71f6fed4c861908
+2026-06-29 10:01:41 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42a4c3a61b319e90126be0 for project 6a42885640c9f9897ab2e143
+2026-06-30 00:33:55 [info]: MongoDB connection established successfully
+2026-06-30 00:33:55 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 00:34:16 [info]: MongoDB connection established successfully
+2026-06-30 00:34:16 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 00:38:24 [info]: [Notification] Created PROJECT_LIKED for owner 6a428848a71f6fed4c861908
+2026-06-30 00:38:24 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42c1e86ad096503fa11512 for project 6a42885640c9f9897ab2e143
+2026-06-30 00:38:26 [info]: [Notification] Created PROJECT_LIKED for owner 6a428848a71f6fed4c861908
+2026-06-30 00:38:26 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42c1e86ad096503fa11512 for project 6a42885640c9f9897ab2e144
+2026-06-30 00:42:25 [info]: MongoDB connection established successfully
+2026-06-30 00:42:25 [info]: MongoDB connection established successfully
+2026-06-30 00:42:25 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 00:42:25 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 00:42:34 [info]: MongoDB connection established successfully
+2026-06-30 00:42:34 [info]: MongoDB connection established successfully
+2026-06-30 00:42:34 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 00:42:34 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 00:42:54 [info]: MongoDB connection established successfully
+2026-06-30 00:42:54 [info]: MongoDB connection established successfully
+2026-06-30 00:42:54 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 00:42:54 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 00:55:34 [info]: [Notification] Created PROJECT_LIKED for owner 6a428848a71f6fed4c861908
+2026-06-30 00:55:34 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42a3f7a61b319e90126bc6 for project 6a42885640c9f9897ab2e144
+2026-06-30 00:59:07 [info]: [Notification] Created PROJECT_LIKED for owner 6a428848a71f6fed4c861908
+2026-06-30 00:59:07 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42c1e86ad096503fa11512 for project 6a42885640c9f9897ab2e143
+2026-06-30 00:59:20 [info]: [Notification] Created PROJECT_LIKED for owner 6a428848a71f6fed4c861908
+2026-06-30 00:59:20 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42c1e86ad096503fa11512 for project 6a42885640c9f9897ab2e143
+2026-06-30 00:59:22 [info]: [Notification] Created PROJECT_LIKED for owner 6a428848a71f6fed4c861908
+2026-06-30 00:59:22 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42c1e86ad096503fa11512 for project 6a42885640c9f9897ab2e143
+2026-06-30 00:59:32 [info]: [Notification] Created PROJECT_LIKED for owner 6a428848a71f6fed4c861908
+2026-06-30 00:59:32 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42c1e86ad096503fa11512 for project 6a42885640c9f9897ab2e143
+2026-06-30 01:01:09 [info]: MongoDB connection established successfully
+2026-06-30 01:01:09 [info]: MongoDB connection established successfully
+2026-06-30 01:01:09 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:01:09 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:01:37 [info]: [Notification] Created PROJECT_LIKED for owner 6a428848a71f6fed4c861908
+2026-06-30 01:01:37 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42c1e86ad096503fa11512 for project 6a42885640c9f9897ab2e143
+2026-06-30 01:02:02 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42a3f7a61b319e90126bc6 for project 6a42885640c9f9897ab2e143
+2026-06-30 01:02:02 [info]: [Notification] Created PROJECT_LIKED for owner 6a428848a71f6fed4c861908
+2026-06-30 01:02:43 [info]: MongoDB connection established successfully
+2026-06-30 01:02:43 [info]: MongoDB connection established successfully
+2026-06-30 01:02:43 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:02:43 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:04:02 [info]: [Notification] Created PROJECT_LIKED for owner 6a428848a71f6fed4c861908
+2026-06-30 01:04:02 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42a3f7a61b319e90126bc6 for project 6a42885640c9f9897ab2e144
+2026-06-30 01:06:12 [info]: MongoDB connection established successfully
+2026-06-30 01:06:12 [info]: MongoDB connection established successfully
+2026-06-30 01:06:12 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:06:12 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:07:06 [info]: MongoDB connection established successfully
+2026-06-30 01:07:06 [info]: MongoDB connection established successfully
+2026-06-30 01:07:06 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:07:06 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:07:21 [info]: MongoDB connection established successfully
+2026-06-30 01:07:21 [info]: Connected to database, running seed...
+2026-06-30 01:07:21 [info]: [Seed] Student created: alex.chen@student.edu
+2026-06-30 01:07:21 [info]: [Seed] Student created: priya.nair@student.edu
+2026-06-30 01:07:21 [info]: [Seed] Student created: marcus.oliveira@student.edu
+2026-06-30 01:07:21 [info]: [Seed] Student created: amara.osei@student.edu
+2026-06-30 01:07:21 [info]: [Seed] Successfully seeded 12 projects.
+2026-06-30 01:07:21 [info]: Seed completed.
+2026-06-30 01:07:21 [warn]: MongoDB connection disconnected
+2026-06-30 01:08:05 [info]: [Notification] Created PROJECT_LIKED for owner 6a42c9716f1e8aaac5b60ff0
+2026-06-30 01:08:05 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42a3f7a61b319e90126bc6 for project 6a42c9716f1e8aaac5b60ffb
+2026-06-30 01:08:18 [info]: [Notification] Created PROJECT_LIKED for owner 6a42c9716f1e8aaac5b60ff0
+2026-06-30 01:08:18 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42a3f7a61b319e90126bc6 for project 6a42c9716f1e8aaac5b60ffd
+2026-06-30 01:08:26 [info]: [Notification] Created PROJECT_LIKED for owner 6a42c9716f1e8aaac5b60ff0
+2026-06-30 01:08:26 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42c1e86ad096503fa11512 for project 6a42c9716f1e8aaac5b60ffc
+2026-06-30 01:09:48 [info]: [Notification] Created PROJECT_LIKED for owner 6a42c9716f1e8aaac5b60ff6
+2026-06-30 01:09:48 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42c3e2cbecc5926c24ec67 for project 6a42c9716f1e8aaac5b61000
+2026-06-30 01:13:05 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42c1e86ad096503fa11512 for project 6a42c9716f1e8aaac5b60ffd
+2026-06-30 01:13:05 [info]: [Notification] Created PROJECT_LIKED for owner 6a42c9716f1e8aaac5b60ff0
+2026-06-30 01:13:11 [info]: [Notification] Created PROJECT_LIKED for owner 6a42c9716f1e8aaac5b60ff0
+2026-06-30 01:13:11 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42c1e86ad096503fa11512 for project 6a42c9716f1e8aaac5b60ffd
+2026-06-30 01:14:36 [info]: MongoDB connection established successfully
+2026-06-30 01:14:36 [info]: MongoDB connection established successfully
+2026-06-30 01:14:36 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:14:36 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:15:07 [info]: MongoDB connection established successfully
+2026-06-30 01:15:07 [info]: MongoDB connection established successfully
+2026-06-30 01:15:07 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:15:07 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:15:20 [info]: MongoDB connection established successfully
+2026-06-30 01:15:20 [info]: Connected to database, running seed...
+2026-06-30 01:15:20 [info]: [Seed] Successfully seeded 12 projects.
+2026-06-30 01:15:20 [info]: [Seed] Notifications already seeded — skipping.
+2026-06-30 01:15:20 [info]: Seed completed.
+2026-06-30 01:15:20 [warn]: MongoDB connection disconnected
+2026-06-30 01:17:08 [info]: MongoDB connection established successfully
+2026-06-30 01:17:08 [info]: MongoDB connection established successfully
+2026-06-30 01:17:08 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:17:08 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:18:35 [info]: MongoDB connection established successfully
+2026-06-30 01:18:35 [info]: MongoDB connection established successfully
+2026-06-30 01:18:35 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:18:35 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:19:02 [info]: MongoDB connection established successfully
+2026-06-30 01:19:02 [info]: Connected to database, running seed...
+2026-06-30 01:19:02 [info]: [Seed] Projects already seeded — skipping.
+2026-06-30 01:19:02 [info]: Seed completed.
+2026-06-30 01:19:02 [warn]: MongoDB connection disconnected
+2026-06-30 01:19:14 [info]: MongoDB connection established successfully
+2026-06-30 01:19:14 [info]: MongoDB connection established successfully
+2026-06-30 01:19:14 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:19:14 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:19:30 [info]: MongoDB connection established successfully
+2026-06-30 01:19:30 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:19:30 [info]: MongoDB connection established successfully
+2026-06-30 01:19:30 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:21:02 [info]: MongoDB connection established successfully
+2026-06-30 01:21:02 [info]: MongoDB connection established successfully
+2026-06-30 01:21:02 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:21:02 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 01:21:10 [info]: MongoDB connection established successfully
+2026-06-30 01:21:10 [info]: Connected to database, running seed...
+2026-06-30 01:21:10 [info]: [Seed] Projects already seeded — skipping.
+2026-06-30 01:21:10 [info]: [Seed] Seeded 7 notifications for Alex Chen.
+2026-06-30 01:21:10 [info]: Seed completed.
+2026-06-30 01:22:00 [info]: [Notification] Created PROJECT_LIKED for owner 6a42c9716f1e8aaac5b60ff0
+2026-06-30 01:22:00 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a428848a71f6fed4c861908 for project 6a42cb50a21bb2a505d890ee
+2026-06-30 09:31:11 [info]: MongoDB connection established successfully
+2026-06-30 09:31:11 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 09:32:23 [info]: [Notification] Created PROJECT_LIKED for owner 6a42c9716f1e8aaac5b60ff0
+2026-06-30 09:32:23 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42a3f7a61b319e90126bc6 for project 6a42cb50a21bb2a505d890ed
+2026-06-30 09:46:55 [info]: [Notification] Created USER_FOLLOWED for followed user 6a42c9716f1e8aaac5b60ff3
+2026-06-30 09:46:55 [info]: [ActivityLog] Logged USER_FOLLOWED: 6a42a4c3a61b319e90126be0 followed 6a42c9716f1e8aaac5b60ff3
+2026-06-30 09:51:39 [info]: [ActivityLog] Logged PROJECT_CREATED for project 6a43445362ad29d4d9465b56
+2026-06-30 09:51:39 [info]: [Notification] Created PROJECT_CREATED for owner 6a42a3f7a61b319e90126bc6
+2026-06-30 09:52:08 [info]: [Notification] Created PROJECT_APPROVED for owner 6a42a3f7a61b319e90126bc6
+2026-06-30 09:52:08 [info]: [ActivityLog] Logged PROJECT_STATUS_CHANGED to APPROVED for project 6a43445362ad29d4d9465b56
+2026-06-30 09:53:50 [info]: [Notification] Created PROJECT_LIKED for owner 6a42a3f7a61b319e90126bc6
+2026-06-30 09:53:50 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a4344b862ad29d4d9465b91 for project 6a43445362ad29d4d9465b56
+2026-06-30 09:56:29 [info]: [Notification] Created PROJECT_CREATED for owner 6a4344b862ad29d4d9465b91
+2026-06-30 09:56:29 [info]: [ActivityLog] Logged PROJECT_CREATED for project 6a43457562ad29d4d9465bbe
+2026-06-30 10:25:39 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a4344b862ad29d4d9465b91 for project 6a42cb50a21bb2a505d890ef
+2026-06-30 10:25:39 [info]: [Notification] Created PROJECT_LIKED for owner 6a42c9716f1e8aaac5b60ff0
+2026-06-30 10:25:57 [info]: [Notification] Created PROJECT_LIKED for owner 6a42c9716f1e8aaac5b60ff0
+2026-06-30 10:25:57 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a4344b862ad29d4d9465b91 for project 6a42cb50a21bb2a505d890ef
+2026-06-30 10:56:16 [info]: [Notification] Created PROJECT_LIKED for owner 6a42c9716f1e8aaac5b60ff3
+2026-06-30 10:56:16 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42a3f7a61b319e90126bc6 for project 6a42cb50a21bb2a505d890ec
+2026-06-30 11:09:43 [info]: [Notification] Created PROJECT_LIKED for owner 6a42a3f7a61b319e90126bc6
+2026-06-30 11:09:43 [info]: [ActivityLog] Logged PROJECT_LIKED by 6a42a4c3a61b319e90126be0 for project 6a43445362ad29d4d9465b56
+2026-06-30 11:11:23 [info]: [ActivityLog] Logged USER_FOLLOWED: 6a42a4c3a61b319e90126be0 followed 6a42c9716f1e8aaac5b60ff0
+2026-06-30 11:11:23 [info]: [Notification] Created USER_FOLLOWED for followed user 6a42c9716f1e8aaac5b60ff0
+2026-06-30 11:11:39 [info]: [Notification] Created USER_FOLLOWED for followed user 6a42a3f7a61b319e90126bc6
+2026-06-30 11:11:39 [info]: [ActivityLog] Logged USER_FOLLOWED: 6a42a4c3a61b319e90126be0 followed 6a42a3f7a61b319e90126bc6
+2026-06-30 11:13:02 [info]: [Notification] Created USER_FOLLOWED for followed user 6a42c9716f1e8aaac5b60fed
+2026-06-30 11:13:02 [info]: [ActivityLog] Logged USER_FOLLOWED: 6a42a4c3a61b319e90126be0 followed 6a42c9716f1e8aaac5b60fed
+2026-06-30 11:17:35 [info]: MongoDB connection established successfully
+2026-06-30 11:17:35 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 11:17:48 [info]: MongoDB connection established successfully
+2026-06-30 11:17:48 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 11:17:58 [info]: MongoDB connection established successfully
+2026-06-30 11:17:58 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 11:25:05 [info]: [Notification] Created USER_FOLLOWED for followed user 6a42a3f7a61b319e90126bc6
+2026-06-30 11:25:05 [info]: [ActivityLog] Logged USER_FOLLOWED: 6a42a4c3a61b319e90126be0 followed 6a42a3f7a61b319e90126bc6
+2026-06-30 11:51:52 [info]: [Notification] Created USER_FOLLOWED for followed user 6a42c9716f1e8aaac5b60ff0
+2026-06-30 11:51:52 [info]: [ActivityLog] Logged USER_FOLLOWED: 6a42a4c3a61b319e90126be0 followed 6a42c9716f1e8aaac5b60ff0
+2026-06-30 12:07:16 [info]: MongoDB connection established successfully
+2026-06-30 12:07:16 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 12:09:32 [info]: MongoDB connection established successfully
+2026-06-30 12:09:32 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 12:48:41 [info]: MongoDB connection established successfully
+2026-06-30 12:48:41 [info]: 🚀 Server running on http://localhost:3000 in development mode
+2026-06-30 12:48:52 [info]: Received SIGINT. Starting graceful shutdown...

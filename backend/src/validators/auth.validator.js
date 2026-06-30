@@ -5,7 +5,7 @@ export const googleLogin = Joi.object({
     "any.required": "ID token is required",
     "string.empty": "ID token cannot be empty",
   }),
-  role: Joi.string().valid("STUDENT", "RECRUITER").optional(),
+  role: Joi.string().valid("STUDENT", "RECRUITER", "ADMIN").optional(),
 });
 
 export default {
