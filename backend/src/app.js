@@ -17,6 +17,7 @@ import projectRoutes from "./routes/project.routes.js";
 import notificationRoutes from "./routes/notification.routes.js";
 import interactionRoutes from "./routes/interaction.routes.js";
 import adminRoutes from "./routes/admin.routes.js";
+import statsRoutes from "./routes/stats.routes.js";
 
 const app = express();
 
@@ -28,10 +29,21 @@ app.use(
   })
 );
 
-// CORS configuration
+// CORS configuration — allow any localhost port in development
+const allowedOrigins = env.NODE_ENV === "development"
+  ? (origin, callback) => {
+      // Allow all localhost origins (any port) in development
+      if (!origin || origin.startsWith("http://localhost:") || origin.startsWith("http://127.0.0.1:")) {
+        callback(null, true);
+      } else {
+        callback(new Error("CORS: Origin not allowed"));
+      }
+    }
+  : env.CLIENT_URL;
+
 app.use(
   cors({
-    origin: env.CLIENT_URL,
+    origin: allowedOrigins,
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -74,6 +86,7 @@ app.use("/api/projects", projectRoutes);
 app.use("/api/notifications", notificationRoutes);
 app.use("/api/interactions", interactionRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/stats", statsRoutes);
 
 // 404 Handler for unmatched routes
 app.use((req, res, next) => {

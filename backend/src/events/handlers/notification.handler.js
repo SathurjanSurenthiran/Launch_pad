@@ -7,14 +7,14 @@ import logger from "../../utils/logger.js";
  * @param {Object} repositories 
  */
 export const registerNotificationHandlers = (emitter, { notificationRepository }) => {
-  
+
   // ON 'PROJECT_CREATED'
   emitter.on(EVENTS.PROJECT_CREATED, async ({ projectId, ownerId, projectTitle }) => {
     try {
       await notificationRepository.create({
         recipient: ownerId,
         type: "PROJECT_CREATED",
-        message: `Your project '${projectTitle}' has been submitted for review.`,
+        message: `Submission Received: Your project "${projectTitle}" has been submitted and is pending review by an administrator.`,
         referenceId: projectId,
         isRead: false,
       });
@@ -31,16 +31,16 @@ export const registerNotificationHandlers = (emitter, { notificationRepository }
       let type = "";
 
       if (status === "APPROVED") {
-        message = `Your project '${projectTitle}' has been approved and is now live!`;
+        message = `Project Approved: Your project "${projectTitle}" has been reviewed and approved. It is now publicly visible.`;
         type = "PROJECT_APPROVED";
       } else if (status === "REJECTED") {
-        message = `Your project '${projectTitle}' was rejected. Reason: ${rejectionReason}`;
+        message = `Project Rejected: Your project "${projectTitle}" was not approved. Reason: ${rejectionReason}. Please review the feedback and resubmit if applicable.`;
         type = "PROJECT_REJECTED";
       } else if (status === "HIDDEN") {
-        message = `Your project '${projectTitle}' has been hidden.`;
+        message = `Project Hidden: Your project "${projectTitle}" has been hidden from public view by an administrator.`;
         type = "PROJECT_HIDDEN";
       } else if (status === "PENDING") {
-        message = `Your project '${projectTitle}' has been submitted for review.`;
+        message = `Submission Updated: Your project "${projectTitle}" has been resubmitted and is pending review.`;
         type = "PROJECT_UPDATED";
       } else {
         // Return without sending notification if status is DRAFT
@@ -72,7 +72,7 @@ export const registerNotificationHandlers = (emitter, { notificationRepository }
         recipient: projectOwnerId,
         sender: likedByUserId,
         type: "PROJECT_LIKED",
-        message: `${likedByName} liked your project '${projectTitle}'.`,
+        message: `Project Engagement: ${likedByName} has endorsed your project "${projectTitle}". Your work is gaining recognition on the platform.`,
         referenceId: projectId,
         isRead: false,
       });
@@ -89,7 +89,7 @@ export const registerNotificationHandlers = (emitter, { notificationRepository }
         recipient: followingId,
         sender: followerId,
         type: "USER_FOLLOWED",
-        message: `${followerName} started following you.`,
+        message: `New Follower: ${followerName} is now following your profile.`,
         referenceId: followerId,
         isRead: false,
       });

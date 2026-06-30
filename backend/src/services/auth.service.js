@@ -3,6 +3,7 @@ import { generateToken } from "../utils/jwt.js";
 import { userRepository } from "../container/container.js";
 import AuthorizationException from "../exceptions/authorization.exception.js";
 import NotFoundException from "../exceptions/not-found.exception.js";
+import ValidationException from "../exceptions/validation.exception.js";
 
 /**
  * Handles user login and registration using Google OAuth ID Token.
@@ -62,6 +63,12 @@ export const loginWithGoogle = async (idToken, requestedRole = "STUDENT") => {
     if (!user.profilePicture && picture) {
       user.profilePicture = picture;
       updateFields.profilePicture = picture;
+      updated = true;
+    }
+    // Promote admin@test.com to ADMIN if somehow created with wrong role
+    if (email === "admin@test.com" && user.role !== "ADMIN") {
+      user.role = "ADMIN";
+      updateFields.role = "ADMIN";
       updated = true;
     }
     if (user.role === "RECRUITER" && !user.staffVerified) {
