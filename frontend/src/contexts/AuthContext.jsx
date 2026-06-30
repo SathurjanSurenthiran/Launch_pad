@@ -10,6 +10,13 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     const restoreSession = async () => {
+      if (!authService.hasSessionMarker()) {
+        setUser(null);
+        setIsAuthenticated(false);
+        setIsLoading(false);
+        return;
+      }
+
       try {
         const response = await authService.getMe();
         // Backend responds with user object or details inside response.data
@@ -20,11 +27,13 @@ export function AuthProvider({ children }) {
         } else {
           setUser(null);
           setIsAuthenticated(false);
+          authService.clearSession();
         }
-      } catch (error) {
+      } catch {
         // Silently fail on 401 Unauthorized (expected when logged out)
         setUser(null);
         setIsAuthenticated(false);
+        authService.clearSession();
       } finally {
         setIsLoading(false);
       }
@@ -34,6 +43,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   const login = (userData) => {
+    authService.markSession();
     setUser(userData);
     setIsAuthenticated(true);
   };
@@ -44,6 +54,7 @@ export function AuthProvider({ children }) {
     } catch (error) {
       console.error('Logout request failed:', error);
     } finally {
+      authService.clearSession();
       setUser(null);
       setIsAuthenticated(false);
       window.location.href = '/login';
