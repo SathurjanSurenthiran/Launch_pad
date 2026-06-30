@@ -64,69 +64,68 @@ export default function LoginPage() {
     toast.error('Google Sign-In failed. Ensure the origin is registered in Google Cloud Console.');
   };
 
-
   if (isLoading) {
     return (
-      <div style={styles.loadingWrap}>
+      <div className="flex items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900">
         <Spinner size="lg" />
       </div>
     );
   }
 
   return (
-    <div style={styles.page}>
-      <div style={styles.card}>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-950 px-4 py-8 font-sans">
+      <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl w-full rounded-2xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
 
         {/* ── LEFT PANEL ── */}
-        <div style={styles.leftPanel}>
-          <div style={styles.leftTop}>
-            <div style={styles.brand}>
-              <div style={styles.brandMark}>LP</div>
-              <span style={styles.brandName}>LaunchPad</span>
+        <div className="hidden md:flex flex-col justify-between bg-slate-900 dark:bg-slate-950 p-12 gap-10">
+          <div className="flex flex-col gap-7">
+            <div className="flex items-center gap-2.5">
+              <div className="w-9 h-9 bg-blue-600 rounded-lg flex items-center justify-center text-xs font-black text-white tracking-wider">LP</div>
+              <span className="text-lg font-bold text-white tracking-tight">LaunchPad</span>
             </div>
 
-            <h2 style={styles.heroHeading}>
+            <h2 className="text-3xl font-bold text-white leading-tight tracking-tight">
               Where student<br />builders get<br />discovered.
             </h2>
-            <p style={styles.heroSub}>
+            <p className="text-sm text-slate-400 dark:text-slate-500 leading-relaxed font-light">
               Showcase your projects to thousands of recruiters and industry leaders worldwide.
             </p>
           </div>
 
-          <div style={styles.statRow}>
-            <div style={styles.stat}>
-              <span style={styles.statNum}>{platformStats.totalStudents}</span>
-              <span style={styles.statLabel}>Students</span>
+          <div className="flex items-center gap-5 pt-4 border-t border-slate-800">
+            <div className="flex flex-col gap-0.5">
+              <span className="text-xl font-bold text-white">{platformStats.totalStudents}</span>
+              <span className="text-[10px] font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Students</span>
             </div>
-            <div style={styles.statDivider} />
-            <div style={styles.stat}>
-              <span style={styles.statNum}>{platformStats.totalRecruiters}</span>
-              <span style={styles.statLabel}>Recruiters</span>
+            <div className="w-[1px] h-8 bg-slate-800" />
+            <div className="flex flex-col gap-0.5">
+              <span className="text-xl font-bold text-white">{platformStats.totalRecruiters}</span>
+              <span className="text-[10px] font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Recruiters</span>
             </div>
-            <div style={styles.statDivider} />
-            <div style={styles.stat}>
-              <span style={styles.statNum}>{platformStats.totalProjects}</span>
-              <span style={styles.statLabel}>Projects</span>
+            <div className="w-[1px] h-8 bg-slate-800" />
+            <div className="flex flex-col gap-0.5">
+              <span className="text-xl font-bold text-white">{platformStats.totalProjects}</span>
+              <span className="text-[10px] font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Projects</span>
             </div>
           </div>
 
-          <p style={styles.copyright}>LaunchPad &copy; {new Date().getFullYear()}</p>
+          <p className="text-[10px] text-slate-500 tracking-wider">LaunchPad &copy; {new Date().getFullYear()}</p>
         </div>
 
         {/* ── RIGHT PANEL ── */}
-        <div style={styles.rightPanel}>
-          <div style={styles.rightContent}>
+        <div className="flex items-center justify-center p-8 sm:p-12 bg-white dark:bg-gray-900">
+          <div className="w-full flex flex-col gap-6">
 
-            <div style={styles.formHeader}>
-              <h1 style={styles.formTitle}>Sign in</h1>
-              <p style={styles.formSub}>Use your Google account to continue</p>
+            <div className="space-y-1">
+              <h1 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">Sign in</h1>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Use your Google account to continue</p>
             </div>
 
             {/* Origin Error */}
             {originError && (
-              <div style={styles.errorBox}>
-                <p style={styles.errorTitle}>Google OAuth: Origin Not Registered</p>
-                <p style={styles.errorDesc}>
+              <div className="bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900/35 rounded-xl p-4 space-y-1">
+                <p className="text-sm font-semibold text-red-600 dark:text-red-400">Google OAuth: Origin Not Registered</p>
+                <p className="text-xs text-red-600 dark:text-red-400 leading-relaxed">
                   Add <strong>{window.location.origin}</strong> to your Google Cloud Console under
                   APIs &amp; Services &rarr; Credentials &rarr; Authorized JavaScript Origins.
                 </p>
@@ -134,14 +133,14 @@ export default function LoginPage() {
             )}
 
             {/* Google Sign-In */}
-            <div style={styles.googleSection}>
+            <div className="flex flex-col gap-2.5">
               {actionLoading ? (
-                <button id="google-signin-btn" disabled style={styles.loadingBtn}>
+                <button id="google-signin-btn" disabled className="flex items-center gap-2.5 px-4 py-2.5 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl cursor-not-allowed opacity-70 text-gray-700 dark:text-gray-200 text-sm font-medium">
                   <Spinner size="sm" />
-                  <span style={styles.loadingBtnText}>Signing in...</span>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-200">Signing in...</span>
                 </button>
               ) : (
-                <div id="google-signin-btn" style={styles.googleWrapper}>
+                <div id="google-signin-btn" className="flex justify-start">
                   <GoogleLogin
                     onSuccess={handleGoogleSuccess}
                     onError={handleGoogleError}
@@ -155,13 +154,11 @@ export default function LoginPage() {
               )}
             </div>
 
-
-
-            <p style={styles.footNote}>
+            <p className="text-xs text-gray-400 dark:text-gray-500 leading-relaxed">
               New here? Your account is created automatically on first sign in.
               By continuing you agree to our{' '}
-              <span style={styles.footNoteLink}>Terms of Service</span> and{' '}
-              <span style={styles.footNoteLink}>Privacy Policy</span>.
+              <span className="text-blue-600 dark:text-blue-400 cursor-pointer underline hover:text-blue-700 dark:hover:text-blue-300">Terms of Service</span> and{' '}
+              <span className="text-blue-600 dark:text-blue-400 cursor-pointer underline hover:text-blue-700 dark:hover:text-blue-300">Privacy Policy</span>.
             </p>
           </div>
         </div>
@@ -170,292 +167,3 @@ export default function LoginPage() {
     </div>
   );
 }
-
-/* ─── Styles ── */
-const styles = {
-  loadingWrap: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: '100vh',
-    background: '#f5f5f5',
-  },
-
-  page: {
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    background: '#f0f2f5',
-    padding: '24px 16px',
-    fontFamily: '"Inter", "Segoe UI", system-ui, sans-serif',
-  },
-
-  card: {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    maxWidth: '880px',
-    width: '100%',
-    borderRadius: '4px',
-    overflow: 'hidden',
-    boxShadow: '0 2px 16px rgba(0,0,0,0.12)',
-  },
-
-  /* Left Panel */
-  leftPanel: {
-    background: '#1a2744',
-    padding: '52px 48px',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    gap: '40px',
-  },
-
-  leftTop: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '28px',
-  },
-
-  brand: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '10px',
-  },
-
-  brandMark: {
-    width: '36px',
-    height: '36px',
-    background: '#2563eb',
-    borderRadius: '4px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: '13px',
-    fontWeight: '700',
-    color: '#fff',
-    letterSpacing: '0.5px',
-  },
-
-  brandName: {
-    fontSize: '18px',
-    fontWeight: '700',
-    color: '#fff',
-    letterSpacing: '-0.3px',
-  },
-
-  heroHeading: {
-    fontSize: '32px',
-    fontWeight: '700',
-    color: '#fff',
-    lineHeight: 1.25,
-    letterSpacing: '-0.5px',
-    margin: 0,
-  },
-
-  heroSub: {
-    fontSize: '14px',
-    color: 'rgba(255,255,255,0.55)',
-    lineHeight: 1.7,
-    margin: 0,
-  },
-
-  statRow: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '20px',
-    paddingTop: '8px',
-    borderTop: '1px solid rgba(255,255,255,0.1)',
-  },
-
-  stat: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '2px',
-  },
-
-  statNum: {
-    fontSize: '20px',
-    fontWeight: '700',
-    color: '#fff',
-    lineHeight: 1,
-  },
-
-  statLabel: {
-    fontSize: '11px',
-    color: 'rgba(255,255,255,0.45)',
-    textTransform: 'uppercase',
-    letterSpacing: '0.8px',
-    fontWeight: '500',
-  },
-
-  statDivider: {
-    width: '1px',
-    height: '32px',
-    background: 'rgba(255,255,255,0.12)',
-  },
-
-  copyright: {
-    fontSize: '11px',
-    color: 'rgba(255,255,255,0.25)',
-    margin: 0,
-    letterSpacing: '0.3px',
-  },
-
-  /* Right Panel */
-  rightPanel: {
-    background: '#ffffff',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  rightContent: {
-    width: '100%',
-    padding: '52px 48px',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '20px',
-  },
-
-  formHeader: {
-    marginBottom: '4px',
-  },
-
-  formTitle: {
-    fontSize: '26px',
-    fontWeight: '700',
-    color: '#111827',
-    margin: '0 0 6px 0',
-    letterSpacing: '-0.4px',
-  },
-
-  formSub: {
-    fontSize: '14px',
-    color: '#6b7280',
-    margin: 0,
-  },
-
-  /* Error box */
-  errorBox: {
-    background: '#fef2f2',
-    border: '1px solid #fecaca',
-    borderRadius: '4px',
-    padding: '12px 14px',
-  },
-
-  errorTitle: {
-    fontSize: '13px',
-    fontWeight: '600',
-    color: '#dc2626',
-    margin: '0 0 4px 0',
-  },
-
-  errorDesc: {
-    fontSize: '12px',
-    color: '#dc2626',
-    margin: 0,
-    lineHeight: 1.5,
-  },
-
-  /* Google */
-  googleSection: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '10px',
-  },
-
-  googleWrapper: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-  },
-
-  loadingBtn: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '10px',
-    padding: '10px 16px',
-    background: '#f9fafb',
-    border: '1px solid #d1d5db',
-    borderRadius: '4px',
-    cursor: 'not-allowed',
-    opacity: 0.7,
-    color: '#374151',
-    fontSize: '14px',
-    fontWeight: '500',
-  },
-
-  loadingBtnText: {
-    fontSize: '14px',
-    fontWeight: '500',
-    color: '#374151',
-  },
-
-  /* Divider */
-  divider: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '12px',
-  },
-
-  dividerLine: {
-    flex: 1,
-    height: '1px',
-    background: '#e5e7eb',
-  },
-
-  dividerText: {
-    fontSize: '12px',
-    color: '#9ca3af',
-    fontWeight: '500',
-    whiteSpace: 'nowrap',
-    textTransform: 'uppercase',
-    letterSpacing: '0.6px',
-  },
-
-  /* Role grid */
-  roleGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
-    gap: '8px',
-  },
-
-  roleBtn: {
-    padding: '10px 8px',
-    background: '#fff',
-    border: '1px solid #d1d5db',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    fontSize: '13px',
-    fontWeight: '500',
-    color: '#374151',
-    transition: 'all 0.15s ease',
-    letterSpacing: '0.2px',
-  },
-
-  roleBtnHover: {
-    padding: '10px 8px',
-    background: '#f0f7ff',
-    border: '1px solid #2563eb',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    fontSize: '13px',
-    fontWeight: '500',
-    color: '#2563eb',
-    transition: 'all 0.15s ease',
-    letterSpacing: '0.2px',
-  },
-
-  footNote: {
-    fontSize: '12px',
-    color: '#9ca3af',
-    lineHeight: 1.6,
-    margin: '4px 0 0 0',
-  },
-
-  footNoteLink: {
-    color: '#2563eb',
-    cursor: 'pointer',
-    textDecoration: 'underline',
-  },
-};
